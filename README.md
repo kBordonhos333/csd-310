@@ -1,2 +1,2 @@
-# csd-310
+# csd_310
 Database Development and Use
