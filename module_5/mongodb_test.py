@@ -1,3 +1,4 @@
+# Kelly Bordonhos Module 5 Assignment
 # creating mongodb client
 
 from pymongo import MongoClient
@@ -14,6 +15,3 @@ client = MongoClient(url)
 db = client.pytech
 
 print(db.list_collection_names())
-
-
-
