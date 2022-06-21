@@ -18,11 +18,12 @@ students = db.students
 
 docs = db.students.find({})
 
-for doc in docs:
-    print(doc)
+print("\n -- DISPLAYING STUDENTS DOCUMENTS FROM find() QUERY --")
 
-doc = db.students.find_one({"student_id": "1007"})
-print(f"\n")
-print("Displaying student document from find_one() query: ")
-print(f"\n")
-print(doc)
+for doc in docs:
+    print("  Student ID: " + doc["student_id"] + "\n  First Name: " + doc["first_name"] + "\n  Last Name: " + doc["last_name"] + "\n")
+
+Oakenshield = students.find_one({"student_id": "1007"})
+
+print("\n  -- DISPLAYING STUDENT DOCUMENT FROM find_one() QUERY --")
+print("  Student ID: " + Oakenshield["student_id"] + "\n  First Name: " + Oakenshield["first_name"] + "\n  Last Name: " + Oakenshield["last_name"] + "\n")
