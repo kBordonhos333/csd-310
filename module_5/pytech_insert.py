@@ -18,25 +18,25 @@ Oakenshield = {
     "first_name": "Thorin",
     "last_name": "Oakenshield"
     }
-
-Oakenshield_student_id = students.insert_one(Oakenshield).inserted_id
-
 Baggins = {
     "student_id": "1008",
     "first_name": "Bilbo",
     "last_name": "Baggins"
     }
-
-Baggins_student_id = students.insert_one(Baggins).inserted_id
-
 Froggins = {
     "student_id": "1009",
     "first_name": "Frodo",
     "last_name": "Froggins"
     }
 
-Froggins_student_id = students.insert_one(Froggins).inserted_id
+print("\n  -- INSERT STATEMENTS --")
+Oakenshield_student_id = students.insert_one(Oakenshield).inserted_id
+print("  Inserted student record Thorin Oakenshield into the students collection with document_id " + str(Oakenshield_student_id))
 
-print(f"\nInserted student record", Oakenshield, Oakenshield_student_id)
-print(f"\nInserted student record", Baggins, Baggins_student_id)
-print(f"\nInserted student record", Froggins, Froggins_student_id)
+Baggins_student_id = students.insert_one(Baggins).inserted_id
+print("  Inserted student record Bilbo Baggins into the students collection with document_id " + str(Baggins_student_id))
+
+Froggins_student_id = students.insert_one(Froggins).inserted_id
+print("  Inserted student record Frodo Froggins into the students collection with document_id " + str(Froggins_student_id))
+
+input("\n\n  End of program, press any key to exit... ")
